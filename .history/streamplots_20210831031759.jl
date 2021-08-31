@@ -20,11 +20,12 @@ fig
 #save("streamplots3.png", fig, px_per_unit = 2)
 # %%
 μs = -1:0.1:10
-# %%
+
+
 μ_lslider = labelslider!(fig, 
-            L"\mu",
+            L"\lambda",
             μs;
-            formats = [x -> "$(round(x, digits = 1))" for s in [L"\mu"]],
+            formats = [x -> "$(round(x, digits = 1))" for s in [L"\lambdas"]],
             width = 500,
             height=25)
 # %%
@@ -34,5 +35,3 @@ fig[2, 1] = μ_lslider.layout
 # %%
 
 f_μ = @lift(f($(μ_slider.value)))
-
-# %%

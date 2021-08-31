@@ -34,5 +34,3 @@ fig[2, 1] = μ_lslider.layout
 # %%
 
 f_μ = @lift(f($(μ_slider.value)))
-
-# %%
